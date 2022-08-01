@@ -1,0 +1,147 @@
+.App {
+  text-align: center;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input, label {
+  display:inline-block;
+  text-align: left;
+  align-items: flex-start;
+}
+.heading{
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.heading1{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.paragraph{
+  font-size: 1.7rem;
+  padding: 20px;
+  font-weight: 500;
+
+}
+.label{
+  display: grid;
+  
+}
+.Step1_main{
+  margin-top: 100px;
+}
+.step2_main{
+  margin-top: 30px;
+}
+.button{
+  padding: 0.5rem 2rem;
+  color: white;
+  background-color: black;
+  border-radius: 0.2rem;
+  border-color: transparent;
+}
+.button{
+  padding: 0.5rem 3rem;
+  color: white;
+  background-color: black;
+  border-radius: 0.2rem;
+  border-color: transparent;
+  margin-left: 10px;
+}
+.labels{
+  flex-direction: row;
+  display: inline-flex;
+  text-align: start;
+}
+.input{
+  padding: 0.5rem 0.5rem;
+  box-shadow: 3px 3px 3px 31px 13px lightgray;
+  margin: 1rem;
+  border: 1px solid;
+  border-radius: 3px;
+
+}
+.input1{
+  padding: 0.5rem 0.5rem;
+  box-shadow: 3px 3px 3px 31px 13px lightgray;
+  margin: 1rem;
+  border: "1px solid";
+  border-radius: 3px;
+  width: 180px;
+}
+.main_footer{
+  background-color: rgb(250, 250, 250);
+  padding: 3rem;
+  width: 60%;
+  margin: 10px;
+  display: inline-block;
+}
+.final_footer{background-color: rgb(250, 250, 250);
+  padding: 3rem;
+  width: 60%;
+  margin: 10px;
+  display: inline-block;
+
+}
+.radio{
+  display: -webkit-box;
+  flex-direction: row;
+  justify-content: left;
+}
+.main_radio{
+  display: inline-block;
+  
+}
+label{
+
+  flex-direction: row;
+}
+.Title{
+  font-size: 3rem;
+}
+.buttonBack{ padding: 0.5rem 3rem;
+  color:black;
+  background-color: white;
+  border-radius: 0.2rem;
+  border-color: black;
+  margin-left: 10px;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
