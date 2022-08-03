@@ -1,3 +1,24 @@
+Project Title: 
+Multi Step Form
+
+Description: 
+First page is Start page with Start button and description. User can click on the start button and form would start and show second page. In second page we have name, age, user country name and user selected package according to country currency. Each country is representing particular currency which is selected by user. User can see which package is selected and what is outputs on second page below the inputs. User can also go back to page 2. Each country is displaying its own currency so that the user can view premium calculations in the appropriate currency. HKD representing Hong Kong Dollar, AUD representing Australian Dollar and USD is USA dollar. User can choose any package and calculation will show on screen. First package is Standard Package, Safe is 50% more than standard and Super safe is 75% of Standard. Formula for premium package is 10*Age. The premium will be adjusted appropriately depending on the rate 10 * Age * Rate for the chosen nation. Premium will be change and show on screen according to user selected. Error page is created for Age condition.
+•	When the customer clicks the Next button and his age is greater than 100, we direct him to Page Error.
+•	On Error page user can go back to main or first page
+•	If not, the user can revert or move on to the next page.
+Final or Last Page will show User Summary Name, Age, where he/ she live and package which was selected according to given formula and condition with Country currency.
+Approach
+We use React JS and Vanilla CSS. With Simple JavaScript was very messy and lengthy we can easily manage with useState hook of React JS. We can easily manage state with hooks in React JS. React code is easier to maintain and is flexible due to its modular structure.
+
+Dependencies
+React JS 17.0.2, Vanilla CSS
+
+Browsers
+Chrome, Safari and FireFox
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

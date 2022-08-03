@@ -37,7 +37,7 @@ const Final = ({ nextStep, handleFormData, prevStep, values ,pkg})  => {
             Back
               </button>
 
-              <button className="button" type="submit">
+              <button className="button" type="submit" >
              Buy
               </button>
             </div>

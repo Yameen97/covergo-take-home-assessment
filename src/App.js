@@ -12,7 +12,9 @@ function App() {
   //state for steps
   const [step, setStep] = useState(1);
   const [pkg, setPkg] = useState();
-  const [cur, setCur] = useState()
+  const [cur, setCur] = useState();
+  const [fifty, setFifty] = useState(0);
+  const [seventy, setSeventy] = useState(0);
 
   //state for form data
   const [formData, setFormData] = useState({
@@ -38,17 +40,20 @@ function App() {
   };
 
   const handleInputData = input => e => {
-
-
     if(e.target.value === "USA"){
       setCur('USD')
+      setFifty((50/100)*(formData.Age*10*2))
+      setSeventy((75/100)*(formData.Age*10*2))
     }
     else if(e.target.value === 'Hong Kong'){
       setCur('HKD')
-      
+      setFifty((50/100)*(formData.Age*10*1))
+      setSeventy((75/100)*(formData.Age*10*1))
     }
     else if(e.target.value === 'Australia'){
       setCur('AUD')
+      setFifty((50/100)*(formData.Age*10*3))
+      setSeventy((75/100)*(formData.Age*10*3))
     }
 
 
@@ -62,10 +67,12 @@ function App() {
       }
       else if(formData.Package === "Safe"){
         let per = (50/100)*(formData.Age*10*2)
+        setFifty(per)
         setPkg(per +(formData.Age*10*2)+"USD")
       }
       else if(formData.Package === "Super Safe"){
         let per = (75/100)*(formData.Age*10*2)
+        setSeventy(per)
         setPkg(per+(formData.Age*10*2)+"USD")
       }
     }
@@ -75,10 +82,12 @@ function App() {
       }
       else if(formData.Package === "Safe"){
         let per = (50/100)*(formData.Age*10*1)
+        setFifty(per)
         setPkg(per +(formData.Age*10*1)+"HKD")
       }
       else if(formData.Package === "Super Safe"){
         let per = (75/100)*(formData.Age*10*1)
+        setSeventy(per)
         setPkg(per +(formData.Age*10*1)+"HKD")
         
       }
@@ -88,10 +97,12 @@ function App() {
       }
       else if(formData.Package === "Safe"){
         let per = (50/100)*(formData.Age*10*3)
+        setFifty(per)
         setPkg(per+(formData.Age*10*3)+"AUD")
       }
       else if(formData.Package === "Super Safe"){
         let per = (75/100)*(formData.Age*10*3)
+        setSeventy(per)
         setPkg(per+(formData.Age*10*3)+"AUD")
       }
      }
@@ -124,14 +135,17 @@ function App() {
    else if(e.target.value === 'Safe'){
     if(formData.Region === "USA"){
       let per = (50/100)*(formData.Age*10*2)
+      setFifty(per)
       setPkg(per +(formData.Age*10*2)+"USD")
     }
     else if(formData.Region === "Hong Kong"){
       let per = (50/100)*(formData.Age*10*1)
+      setFifty(per)
       setPkg(per +(formData.Age*10*1)+"HKD")
     }
     else if(formData.Region === "Australia"){
       let per = (50/100)*(formData.Age*10*3)
+      setFifty(per)
       setPkg(per +(formData.Age*10*3)+"AUD")
       
     }
@@ -139,14 +153,17 @@ function App() {
    else if(e.target.value === 'Super Safe'){
     if(formData.Region === "USA"){
       let per = (75/100)*(formData.Age*10*2)
+      setSeventy(per)
       setPkg(per+(formData.Age*10*2)+"USD")
     }
     else if(formData.Region === "Hong Kong"){
       let per = (75/100)*(formData.Age*10*1)
+      setSeventy(per)
       setPkg(per+(formData.Age*10*1)+"HKD")
     }
     else if(formData.Region === "Australia"){
       let per = (75/100)*(formData.Age*10*3)
+      setSeventy(per)
       setPkg(per+(formData.Age*10*3)+"AUD")
     }
    }
@@ -184,7 +201,7 @@ function App() {
           <div>
             <div>
               <div  >
-                <StepTwo nextStep={nextStep} prevStep={prevStep} pkg={pkg} cur={cur} errorStep={errorStep}handleFormData={handleInputData} values={formData} />
+                <StepTwo nextStep={nextStep} prevStep={prevStep} pkg={pkg} cur={cur} fifty={fifty} seventy={seventy} errorStep={errorStep}handleFormData={handleInputData} values={formData} />
               </div>
             </div>
           </div>

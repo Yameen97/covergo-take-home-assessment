@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 
-const StepTwo = ({ errorStep,nextStep, handleFormData, prevStep, values,setPkg,pkg,cur }) => {
+const StepTwo = ({ errorStep,nextStep, handleFormData, prevStep, values,setPkg,pkg,cur,fifty,seventy }) => {
    //creating error state for validation
   // const [error, setError] = useState(false);
     
@@ -72,8 +72,8 @@ const StepTwo = ({ errorStep,nextStep, handleFormData, prevStep, values,setPkg,p
             <div className="main_footer">
             <div className="main_radio">
             <div className="radio"><label><input type="radio"   name="Package"  value="Standard" onChange={handleFormData("Package")} />Standard</label> </div>  
-            <div className="radio"><label><input type="radio" name="Package" value="Safe" onChange={handleFormData("Package")}/>Safe(+250{cur},50%)</label></div>
-            <div className="radio"><label><input type="radio" name="Package" value="Super Safe" onChange={handleFormData("Package")} />Super Safe(+375{cur},75%)</label></div>
+            <div className="radio"><label><input type="radio" name="Package" value="Safe" onChange={handleFormData("Package")}/>Safe(+{fifty}{cur},50%)</label></div>
+            <div className="radio"><label><input type="radio" name="Package" value="Super Safe" onChange={handleFormData("Package")} />Super Safe(+{seventy}{cur},75%)</label></div>
        
 
             </div>
@@ -86,7 +86,7 @@ const StepTwo = ({ errorStep,nextStep, handleFormData, prevStep, values,setPkg,p
               Back
               </button>
 
-              <button className="button" type="submit">
+              <button className="button" type="submit" >
                Next
               </button>
             </div>
